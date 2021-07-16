@@ -66,7 +66,7 @@ network={
 }
 ```
 
-Don't forget to update the `country` code, for instance `FR`, `GB` or `US`. And change define the `ssid` and the `psk` (password) of your wireless Network.
+Don't forget to update the `country` code, for instance `FR`, `GB` or `US`. And define the `ssid` and the `psk` (password) of your wireless Network.
 
 **Be careful, it only works with 2.4GHz, not 5GHz.**
 
