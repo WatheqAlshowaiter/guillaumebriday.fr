@@ -9,6 +9,8 @@ import {
   faMugHot,
   faAtom,
   faPodcast,
+  faBullhorn,
+  faTimes,
 } from '@fortawesome/free-solid-svg-icons'
 import {
   faCalendarAlt,
@@ -51,7 +53,9 @@ library.add(
   faAmazon,
   faSpotify,
   faPodcast,
-  faMugHot
+  faMugHot,
+  faBullhorn,
+  faTimes
 )
 
 export const onRouteUpdate = () => {
