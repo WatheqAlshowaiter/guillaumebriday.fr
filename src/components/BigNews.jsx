@@ -39,6 +39,7 @@ const BigNews = () => {
               <a
                 href="https://timecop-app.com"
                 target="_blank"
+                rel="noreferrer noopener"
                 className="flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-indigo-600 bg-white hover:bg-indigo-50"
               >
                 Learn more &rarr;
