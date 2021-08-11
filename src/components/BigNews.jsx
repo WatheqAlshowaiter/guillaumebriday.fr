@@ -3,15 +3,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const BigNews = () => {
   const BIG_NEWS_ALERT_KEY = 'big-news-alert'
+  const isBrowser = typeof window !== 'undefined'
 
   const [visible, setVisible] = useState(
-    sessionStorage.getItem(BIG_NEWS_ALERT_KEY) !== 'true'
+    isBrowser && window.sessionStorage.getItem(BIG_NEWS_ALERT_KEY) !== 'true'
   )
 
   const onClose = () => {
     setVisible(false)
 
-    sessionStorage.setItem(BIG_NEWS_ALERT_KEY, 'true')
+    if (isBrowser) {
+      window.sessionStorage.setItem(BIG_NEWS_ALERT_KEY, 'true')
+    }
   }
 
   if (!visible) return null
