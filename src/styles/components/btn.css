@@ -11,7 +11,7 @@
   }
 
   &--link:not(:disabled):hover {
-    @apply ring-4 ring-indigo-700 bg-red-500;
+    @apply ring-4 ring-indigo-200 bg-indigo-500;
   }
 
   &:disabled {
