@@ -1,12 +1,12 @@
 import React from 'react'
-import Img from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image"
 
 const About = ({ file }) => (
   <section className="container pt-16 pb-8 px-3 mx-auto max-w-3xl">
     <div className="flex justify-center">
       <div className="flex flex-col">
-        <Img
-          fluid={file.childImageSharp.fluid}
+        <GatsbyImage
+          image={file.childImageSharp.gatsbyImageData}
           className="rounded-full w-32 mx-auto"
           alt="Photo de profil"
         />

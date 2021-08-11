@@ -37,11 +37,7 @@ export const pageQuery = graphql`
 
     file(relativePath: { eq: "me.jpg" }) {
       childImageSharp {
-        # Specify the image processing specifications right in the query.
-        # Makes it trivial to update as your page's design changes.
-        fluid(maxWidth: 128, quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
+        gatsbyImageData(width: 128, quality: 100)
       }
     }
   }

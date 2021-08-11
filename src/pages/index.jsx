@@ -1,14 +1,14 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Home = ({ data: { file } }) => (
   <div className="container py-16 mx-auto max-w-3xl px-3">
     <div className="flex justify-center">
       <div className="flex flex-col">
-        <Img
-          fluid={file.childImageSharp.fluid}
+        <GatsbyImage
+          image={file.childImageSharp.gatsbyImageData}
           className="rounded-full w-32 mx-auto"
           alt="Photo de profil"
         />
@@ -128,11 +128,7 @@ export const query = graphql`
   {
     file(relativePath: { eq: "me.jpg" }) {
       childImageSharp {
-        # Specify the image processing specifications right in the query.
-        # Makes it trivial to update as your page's design changes.
-        fluid(maxWidth: 128, quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
+        gatsbyImageData(width: 128, quality: 100)
       }
     }
   }

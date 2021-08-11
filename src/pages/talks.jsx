@@ -1,7 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image"
 
 const Talks = ({ data: { site, file, allTalksYaml } }) => (
   <>
@@ -21,8 +21,8 @@ const Talks = ({ data: { site, file, allTalksYaml } }) => (
         liste complète avec les vidéos et les slides.
       </p>
 
-      <Img
-        fluid={file.childImageSharp.fluid}
+      <GatsbyImage
+        image={file.childImageSharp.gatsbyImageData}
         alt="Photo pendant un talk"
         className="mb-12"
       />
@@ -80,11 +80,7 @@ export const pageQuery = graphql`
 
     file(relativePath: { eq: "talk.jpg" }) {
       childImageSharp {
-        # Specify the image processing specifications right in the query.
-        # Makes it trivial to update as your page's design changes.
-        fluid(maxWidth: 800, quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
+        gatsbyImageData(width: 800, quality: 100)
       }
     }
 
