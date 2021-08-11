@@ -3,7 +3,7 @@ import React from 'react'
 import './experience.css'
 
 const Experience = () => (
-  <section className="py-8 bg-gray-200">
+  <section className="py-8 bg-gray-100">
     <div className="container max-w-6xl px-3">
       <h2 className="uppercase text-center text-4xl mb-8">Expérience</h2>
 

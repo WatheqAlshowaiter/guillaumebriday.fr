@@ -26,7 +26,7 @@ const BlogPost = ({
         <PostPagination pageContext={pageContext} />
       </div>
 
-      <div className="bg-gray-200">
+      <div className="bg-gray-100">
         <div className="container px-3 max-w-3xl py-16">
           <CommentList allCommentsYaml={allCommentsYaml} post={post} />
         </div>

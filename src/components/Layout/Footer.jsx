@@ -15,7 +15,7 @@ const Footer = () => {
   `)
 
   return (
-    <footer className="bg-gray-footer text-white px-3 py-6">
+    <footer className="bg-gray-700 text-white px-3 py-6">
       <div className="container max-w-5xl ">
         <p className="m-0 text-2xl font-bold">{site.siteMetadata.title}</p>
 
@@ -27,7 +27,7 @@ const Footer = () => {
           <div className="flex-shrink-0 flex flex-wrap md:w-1/3 mt-4 md:mt-0">
             <span className="w-1/3 mb-2">
               <Link
-                className="footer-link relative text-gray-500 hover:text-gray-100 hover:no-underline"
+                className="footer-link relative text-gray-300 hover:text-gray-100 hover:no-underline"
                 to="/"
               >
                 Home
@@ -36,7 +36,7 @@ const Footer = () => {
 
             <span className="w-1/3 mb-2">
               <Link
-                className="footer-link relative text-gray-500 hover:text-gray-100 hover:no-underline w-1/3"
+                className="footer-link relative text-gray-300 hover:text-gray-100 hover:no-underline w-1/3"
                 to="/a-propos"
               >
                 À propos
@@ -45,7 +45,7 @@ const Footer = () => {
 
             <span className="w-1/3 mb-2">
               <Link
-                className="footer-link relative text-gray-500 hover:text-gray-100 hover:no-underline w-1/3"
+                className="footer-link relative text-gray-300 hover:text-gray-100 hover:no-underline w-1/3"
                 to="/articles"
               >
                 Articles
@@ -54,7 +54,7 @@ const Footer = () => {
 
             <span className="w-1/3 mb-2">
               <Link
-                className="footer-link relative text-gray-500 hover:text-gray-100 hover:no-underline w-1/3"
+                className="footer-link relative text-gray-300 hover:text-gray-100 hover:no-underline w-1/3"
                 to="/categories"
               >
                 Catégories
@@ -63,7 +63,7 @@ const Footer = () => {
 
             <span className="w-1/3 mb-2">
               <Link
-                className="footer-link relative text-gray-500 hover:text-gray-100 hover:no-underline w-1/3"
+                className="footer-link relative text-gray-300 hover:text-gray-100 hover:no-underline w-1/3"
                 to="/mon-profil"
               >
                 Mon profil
@@ -76,7 +76,7 @@ const Footer = () => {
           <ul className="flex justify-between w-2/3 sm:w-1/2 md:w-1/3">
             <li>
               <a
-                className="text-gray-500 hover:text-gray-100"
+                className="text-gray-300 hover:text-gray-100"
                 href="/feed.xml"
                 title="RSS"
               >
@@ -86,7 +86,7 @@ const Footer = () => {
 
             <li>
               <a
-                className="text-gray-500 hover:text-gray-100"
+                className="text-gray-300 hover:text-gray-100"
                 href="https://github.com/guillaumebriday"
                 title="GitHub"
               >
@@ -96,7 +96,7 @@ const Footer = () => {
 
             <li>
               <a
-                className="text-gray-500 hover:text-gray-100"
+                className="text-gray-300 hover:text-gray-100"
                 href="https://twitter.com/guillaumebriday"
                 title="Twitter"
               >
@@ -106,7 +106,7 @@ const Footer = () => {
 
             <li>
               <a
-                className="text-gray-500 hover:text-gray-100"
+                className="text-gray-300 hover:text-gray-100"
                 href="https://instagram.com/guillaumebriday"
                 title="Instagram"
               >
@@ -116,7 +116,7 @@ const Footer = () => {
 
             <li>
               <a
-                className="text-gray-500 hover:text-gray-100"
+                className="text-gray-300 hover:text-gray-100"
                 href="https://www.twitch.tv/guillaumebriday"
                 title="Twitch"
               >
@@ -126,7 +126,7 @@ const Footer = () => {
 
             <li>
               <a
-                className="text-gray-500 hover:text-gray-100"
+                className="text-gray-300 hover:text-gray-100"
                 href="https://www.youtube.com/channel/UCRMx07VuenDu9zexw2ojERQ"
                 title="YouTube"
               >
@@ -136,7 +136,7 @@ const Footer = () => {
 
             <li>
               <a
-                className="text-gray-500 hover:text-gray-100"
+                className="text-gray-300 hover:text-gray-100"
                 href="https://www.linkedin.com/in/guillaumebriday"
                 title="Linkedin"
               >
@@ -146,7 +146,7 @@ const Footer = () => {
 
             <li>
               <a
-                className="text-gray-500 hover:text-gray-100"
+                className="text-gray-300 hover:text-gray-100"
                 href="https://www.amazon.fr/?tag=guillaumebrid-21"
                 title="Lien affilié Amazon"
               >
@@ -156,7 +156,7 @@ const Footer = () => {
 
             <li>
               <a
-                className="text-gray-500 hover:text-gray-100"
+                className="text-gray-300 hover:text-gray-100"
                 href="https://github.com/sponsors/guillaumebriday"
                 title="M'offrir un café"
               >

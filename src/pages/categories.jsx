@@ -28,7 +28,7 @@ const Categories = ({
     <div className="container py-16 px-3 mx-auto max-w-3xl">
       <h1>Catégories</h1>
 
-      <ul className="list-reset pt-4 pb-8 border-b overflow-x-scroll whitespace-no-wrap shadow-md md:shadow-none px-3 -mx-3">
+      <ul className="list-reset pt-4 pb-8 border-b overflow-x-scroll whitespace-nowrap shadow-md md:shadow-none px-3 -mx-3">
         {group.map((category) => (
           <li
             key={category.fieldValue}

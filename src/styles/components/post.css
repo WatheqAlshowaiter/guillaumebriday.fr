@@ -1,5 +1,5 @@
 .post-content {
-  @apply leading-medium;
+  @apply leading-relaxed;
 
   h1,
   h2,
@@ -46,13 +46,17 @@
   }
 
   a {
-    @apply relative text-black font-semibold;
+    @apply relative text-gray-700 font-semibold;
 
     &:after {
       @apply bg-indigo-100;
       content: "";
       z-index: -1;
-      position: absolute 70% -0.1px 0 -0.1px;
+      position: absolute;
+      top: 70%;
+      right: -0.1px;
+      bottom: 0;
+      left: -0.1px;
       transition: top 175ms ease-in-out;
     }
 
@@ -102,7 +106,7 @@ kbd {
 }
 
 p > code {
-  @apply p-2px text-orange-500 bg-orange-100 rounded;
+  @apply p-2px text-yellow-500 bg-yellow-100 rounded;
 }
 
 pre {
@@ -122,5 +126,6 @@ pre {
 }
 
 .hobby-icon {
-  size: 1.25em!important;
+  width: 1.25em!important;
+  height: 1.25em!important;
 }

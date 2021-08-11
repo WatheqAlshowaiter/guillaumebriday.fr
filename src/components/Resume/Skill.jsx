@@ -24,7 +24,7 @@ const skills = [
 ]
 
 const Skill = () => (
-  <section className="py-8 bg-gray-100">
+  <section className="py-8 bg-gray-50">
     <div className="container max-w-6xl px-3">
       <h2 className="uppercase text-center text-4xl mb-8">Compétences</h2>
 

@@ -11,13 +11,13 @@ const About = ({ file }) => (
           alt="Photo de profil"
         />
 
-        <h1 className="mr-4 text-3xl text-gray-700 font-normal">
+        <h1 className="mr-4 text-3xl text-gray-500 font-normal">
           Guillaume <span className="font-extrabold text-black">BRIDAY</span>
         </h1>
       </div>
     </div>
 
-    <div className="post-content text-gray-700">
+    <div className="post-content text-gray-500">
       <p>
         Je suis développeur Web pour faire de{' '}
         <strong>ma passion mon travail</strong>. J'ai pu acquérir de

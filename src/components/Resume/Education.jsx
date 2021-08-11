@@ -4,7 +4,7 @@ const Education = () => (
   <section className="py-8 container max-w-6xl px-3">
     <h2 className="uppercase text-center text-4xl mb-8">Formation</h2>
 
-    <article className="mb-8 py-6 border-b flex flex-wrap md:flex-no-wrap">
+    <article className="mb-8 py-6 border-b flex flex-wrap md:flex-nowrap">
       <div className="flex-shrink-0">
         <div className="inline-block border-b pb-4">
           <div className="inline-block leading-none">
@@ -35,7 +35,7 @@ const Education = () => (
       </div>
     </article>
 
-    <article className="mb-8 py-6 border-b flex flex-wrap md:flex-no-wrap">
+    <article className="mb-8 py-6 border-b flex flex-wrap md:flex-nowrap">
       <div className="flex-shrink-0">
         <div className="inline-block border-b pb-4">
           <div className="inline-block leading-none">
@@ -67,7 +67,7 @@ const Education = () => (
       </div>
     </article>
 
-    <article className="mb-8 py-6 border-b flex flex-wrap md:flex-no-wrap">
+    <article className="mb-8 py-6 border-b flex flex-wrap md:flex-nowrap">
       <div className="flex-shrink-0">
         <div className="inline-block border-b pb-4">
           <div className="inline-block leading-none">
@@ -97,7 +97,7 @@ const Education = () => (
       </div>
     </article>
 
-    <article className="mb-8 py-6 border-b flex flex-wrap md:flex-no-wrap">
+    <article className="mb-8 py-6 border-b flex flex-wrap md:flex-nowrap">
       <div className="flex-shrink-0">
         <div className="inline-block border-b pb-4">
           <div className="inline-block leading-none">

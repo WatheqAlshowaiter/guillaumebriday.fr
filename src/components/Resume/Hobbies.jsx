@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Hobbies = () => (
-  <section className="pt-8 pb-16 bg-gray-200">
+  <section className="pt-8 pb-16 bg-gray-100">
     <div className="container max-w-3xl px-3">
       <h2 className="uppercase text-center text-4xl mb-8">
         Mes centres d'intérêts
