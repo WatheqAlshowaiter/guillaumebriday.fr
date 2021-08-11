@@ -289,13 +289,6 @@ module.exports = {
     },
     'gatsby-plugin-postcss',
     {
-      resolve: 'gatsby-plugin-purgecss',
-      options: {
-        tailwind: true,
-        ignore: ['src/styles/index.css'],
-      },
-    },
-    {
       resolve: `gatsby-plugin-netlify`,
       options: {
         generateMatchPathRewrites: false,
