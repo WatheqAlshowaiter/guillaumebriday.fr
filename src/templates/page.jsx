@@ -19,7 +19,7 @@ const Page = ({ data: { markdownRemark: page, site } }) => (
 
 export default Page
 export const pageQuery = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     site {
       siteMetadata {
         title

@@ -36,7 +36,7 @@ const Blog = ({
 
 export default Blog
 export const PostIndexQuery = graphql`
-  query($skip: Int!, $limit: Int!) {
+  query ($skip: Int!, $limit: Int!) {
     site {
       siteMetadata {
         title

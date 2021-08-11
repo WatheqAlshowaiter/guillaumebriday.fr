@@ -1,7 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 const Talks = ({ data: { site, file, allTalksYaml } }) => (
   <>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 const About = ({ file }) => (
   <section className="container pt-16 pb-8 px-3 mx-auto max-w-3xl">
