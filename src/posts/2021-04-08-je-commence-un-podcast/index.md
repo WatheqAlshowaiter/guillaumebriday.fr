@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Je commence un Podcast"
-category: Billet
+category: Billets
 lang: fr
 ---
 
