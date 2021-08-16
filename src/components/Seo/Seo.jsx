@@ -18,7 +18,7 @@ const Seo = ({ title, description, lang, path }) => {
 
         {/* OpenGraph tags */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content={title} />
+        <meta property="og:title" content={fullTitle} />
         <meta property="og:description" content={description} />
         <meta
           property="og:image"
@@ -28,7 +28,7 @@ const Seo = ({ title, description, lang, path }) => {
         {/* Twitter Card tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:creator" content="Guillaume Briday" />
-        <meta name="twitter:title" content={title} />
+        <meta name="twitter:title" content={fullTitle} />
         <meta name="twitter:description" content={description} />
       </Helmet>
     </>
