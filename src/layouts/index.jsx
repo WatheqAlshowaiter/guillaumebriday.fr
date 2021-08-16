@@ -31,7 +31,7 @@ const Layout = ({ children, location, pageContext }) => {
       </Helmet>
 
       <div className="flex flex-col min-h-screen font-sans leading-normal">
-        {pageContext.isBlog && <ScrollIndicator />}
+        <ScrollIndicator />
 
         <Header isBlog={pageContext.isBlog} />
 
