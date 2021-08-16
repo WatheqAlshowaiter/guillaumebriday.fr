@@ -2,6 +2,7 @@
 layout: post
 title: "Installing Pi-hole on a headless Raspberry Pi Zero W from scratch"
 category: Billets
+lang: en
 ---
 
 ## Introduction
