@@ -6,12 +6,12 @@ import PageSeo from '../components/Seo/PageSeo'
 import { graphql } from 'gatsby'
 
 const Post = ({
-  location,
-  data: { markdownRemark: post, allCommentsYaml, site },
+  path,
+  data: { markdownRemark: post, allCommentsYaml },
   pageContext,
 }) => (
   <>
-    <PageSeo location={location} site={site} page={post}></PageSeo>
+    <PageSeo page={post} path={path} />
 
     <article itemScope="" itemType="http://schema.org/BlogPosting">
       <div className="container pt-16 px-3 max-w-3xl">
@@ -40,14 +40,6 @@ export default Post
 
 export const pageQuery = graphql`
   query ($slug: String!) {
-    site {
-      siteMetadata {
-        title
-        author
-        siteUrl
-      }
-    }
-
     markdownRemark(
       frontmatter: { layout: { eq: "post" } }
       fields: { slug: { eq: $slug } }

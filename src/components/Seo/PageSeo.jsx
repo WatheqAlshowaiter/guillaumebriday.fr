@@ -1,48 +1,31 @@
 import React from 'react'
 import Seo from './Seo'
 import SchemaOrg from './SchemaOrg'
+import useSiteMetadata from '../../hooks/use-site-metadata'
 
-const PageSeo = ({
-  location,
-  page: {
-    excerpt,
-    fields: { datePublished, lang, slug },
-    frontmatter: {
-      layout,
-      category,
-      title: pageTitle,
-      description: pageDescription,
-    },
-  },
-  site: {
-    siteMetadata: { title: siteTitle, siteUrl, author },
-  },
-}) => {
-  const title = `${pageTitle} | ${siteTitle}`
-  const description = pageDescription || excerpt
-
-  console.log(lang)
+const PageSeo = ({ path, page }) => {
+  const siteMetadata = useSiteMetadata()
+  const description = page.frontmatter.description || page.excerpt
 
   return (
     <>
       <Seo
-        title={title}
+        title={page.frontmatter.title}
         description={description}
-        lang={lang}
-        url={location.href}
-        author={author}
-        location={location}
+        lang={page.fields.lang}
+        author={siteMetadata.author}
+        path={path}
       />
 
       <SchemaOrg
-        layout={layout}
-        title={title}
+        layout={page.frontmatter.layout}
+        title={`${page.frontmatter.title} | ${siteMetadata.title}`}
         description={description}
-        articleSection={category}
-        datePublished={datePublished}
-        author={author}
-        siteUrl={siteUrl}
-        url={slug}
+        articleSection={page.frontmatter.category}
+        datePublished={page.fields.datePublished}
+        author={siteMetadata.author}
+        siteUrl={siteMetadata.siteUrl}
+        url={page.fields.slug}
       ></SchemaOrg>
     </>
   )

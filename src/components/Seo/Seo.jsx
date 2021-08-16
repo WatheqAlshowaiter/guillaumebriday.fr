@@ -1,12 +1,17 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
+import useSiteMetadata from '../../hooks/use-site-metadata'
 
-const Seo = ({ title, description, lang, location }) => {
+const Seo = ({ title, description, lang, path }) => {
+  const siteMetadata = useSiteMetadata()
+  const url = [siteMetadata.siteUrl, path].join('')
+  const fullTitle = [title, siteMetadata.title].filter(Boolean).join(' | ')
+
   return (
     <>
       <Helmet>
         {/* General tags */}
-        <title>{title}</title>
+        <title>{fullTitle}</title>
         <html lang={lang || 'fr'}></html>
 
         <meta name="description" content={description} />
@@ -17,7 +22,7 @@ const Seo = ({ title, description, lang, location }) => {
         <meta property="og:description" content={description} />
         <meta
           property="og:image"
-          content={`https://mugshotbot.com/m?theme=two_up&mode=light&color=indigo&pattern=lines_in_motion&image=7a772170&hide_watermark=true&url=${location.href}`}
+          content={`https://mugshotbot.com/m?theme=two_up&mode=light&color=indigo&pattern=lines_in_motion&image=7a772170&hide_watermark=true&url=${url}`}
         />
 
         {/* Twitter Card tags */}

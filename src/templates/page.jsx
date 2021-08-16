@@ -2,9 +2,9 @@ import React from 'react'
 import PageSeo from '../components/Seo/PageSeo'
 import { graphql } from 'gatsby'
 
-const Page = ({ location, data: { markdownRemark: page, site } }) => (
+const Page = ({ path, data: { markdownRemark: page } }) => (
   <>
-    <PageSeo location={location} site={site} page={page}></PageSeo>
+    <PageSeo page={page} path={path} />
 
     <div className="container px-3 py-16 mx-auto max-w-3xl">
       <h1 className="leading-tight">{page.frontmatter.title}</h1>
@@ -21,14 +21,6 @@ export default Page
 
 export const pageQuery = graphql`
   query ($slug: String!) {
-    site {
-      siteMetadata {
-        title
-        author
-        siteUrl
-      }
-    }
-
     markdownRemark(
       frontmatter: { layout: { eq: "page" } }
       fields: { slug: { eq: $slug } }

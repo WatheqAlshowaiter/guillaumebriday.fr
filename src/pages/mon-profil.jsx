@@ -8,12 +8,12 @@ import Experience from '../components/Resume/Experience'
 import Education from '../components/Resume/Education'
 import Hobbies from '../components/Resume/Hobbies'
 
-const Profile = ({ location, data: { site, file } }) => (
+const Profile = ({ path, data: { file } }) => (
   <>
     <Seo
-      title={`Mon profil | ${site.siteMetadata.title}`}
+      title="Mon profil"
       description="Tu trouvera tout mon parcours."
-      location={location}
+      path={path}
     />
 
     <About file={file} />
@@ -27,12 +27,6 @@ const Profile = ({ location, data: { site, file } }) => (
 export default Profile
 export const pageQuery = graphql`
   {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-
     file(relativePath: { eq: "me.jpg" }) {
       childImageSharp {
         gatsbyImageData(width: 128, quality: 100)

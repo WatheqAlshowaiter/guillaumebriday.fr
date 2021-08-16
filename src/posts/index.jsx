@@ -5,18 +5,17 @@ import Pagination from '../components/Layout/Pagination'
 import { graphql } from 'gatsby'
 
 const Blog = ({
-  location,
+  path,
   data: {
     allMarkdownRemark: { edges: posts },
-    site,
   },
   pageContext,
 }) => (
   <>
     <Seo
-      title={`Articles | ${site.siteMetadata.title}`}
+      title="Articles"
       description="La liste de tous les articles que j'ai publié."
-      location={location}
+      path={path}
     />
 
     <div className="container px-3 py-16 mx-auto max-w-3xl">
@@ -36,11 +35,6 @@ const Blog = ({
 export default Blog
 export const PostIndexQuery = graphql`
   query ($skip: Int!, $limit: Int!) {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     allMarkdownRemark(
       sort: { fields: [fields___date], order: DESC }
       limit: $limit

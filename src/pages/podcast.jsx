@@ -6,10 +6,9 @@ import Seo from '../components/Seo/Seo'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Podcast = ({
-  location,
+  path,
   data: {
     allMarkdownRemark: { edges: podcasts },
-    site,
   },
 }) => (
   <>
@@ -18,9 +17,9 @@ const Podcast = ({
     </Helmet>
 
     <Seo
-      title={`Podcast | ${site.siteMetadata.title}`}
+      title="Podcast"
       description="J'ai lancé un Podcast avec des amis pour parler de Tech, de Business, de DevOps, de Produits et plein d'autres choses !"
-      location={location}
+      path={path}
     />
 
     <div className="container py-16 px-3 mx-auto max-w-3xl">
@@ -82,12 +81,6 @@ const Podcast = ({
 export default Podcast
 export const pageQuery = graphql`
   {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-
     allMarkdownRemark(
       sort: { fields: [fields___date], order: DESC }
       filter: { frontmatter: { layout: { eq: "podcast" } } }

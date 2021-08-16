@@ -1,13 +1,13 @@
 import React from 'react'
 import Seo from '../components/Seo/Seo'
-import { graphql, Link } from 'gatsby'
+import { Link } from 'gatsby'
 
-const NotFound = ({ location, data: { site } }) => (
+const NotFound = ({ path }) => (
   <>
     <Seo
-      title={`Oups ! La page est introuvable… | ${site.siteMetadata.title}`}
+      title="Oups ! La page est introuvable…"
       description="La page que vous cherchez n'est plus disponible ou a été déplacée."
-      location={location}
+      path={path}
     />
 
     <div className="container px-3 py-16 mx-auto max-w-3xl">
@@ -23,12 +23,3 @@ const NotFound = ({ location, data: { site } }) => (
 )
 
 export default NotFound
-export const pageQuery = graphql`
-  {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`

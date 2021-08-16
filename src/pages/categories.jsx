@@ -11,17 +11,16 @@ const slugify = (string) => {
 }
 
 const Categories = ({
-  location,
+  path,
   data: {
     allMarkdownRemark: { group },
-    site,
   },
 }) => (
   <>
     <Seo
-      title={`Catégories | ${site.siteMetadata.title}`}
+      title="Catégories"
       description="La liste de tous les articles triés par catégorie."
-      location={location}
+      path={path}
     />
 
     <div className="container py-16 px-3 mx-auto max-w-3xl">
@@ -88,12 +87,6 @@ const Categories = ({
 export default Categories
 export const pageQuery = graphql`
   {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-
     allMarkdownRemark(
       filter: { frontmatter: { layout: { eq: "post" } } }
       sort: { fields: [fields___date], order: DESC }

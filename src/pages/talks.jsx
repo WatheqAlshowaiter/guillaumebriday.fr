@@ -3,12 +3,12 @@ import Seo from '../components/Seo/Seo'
 import { graphql } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 
-const Talks = ({ location, data: { site, file, allTalksYaml } }) => (
+const Talks = ({ path, data: { file, allTalksYaml } }) => (
   <>
     <Seo
-      title={`Talks | ${site.siteMetadata.title}`}
+      title="Talks"
       description="Il arrive que je fasse des talks de temps à autre. Tu trouveras ici la liste complète avec les vidéos et les slides."
-      location={location}
+      path={path}
     />
 
     <div className="container py-16 px-3 mx-auto max-w-3xl">
@@ -70,12 +70,6 @@ const Talks = ({ location, data: { site, file, allTalksYaml } }) => (
 export default Talks
 export const pageQuery = graphql`
   {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-
     file(relativePath: { eq: "talk.jpg" }) {
       childImageSharp {
         gatsbyImageData(width: 800, quality: 100)

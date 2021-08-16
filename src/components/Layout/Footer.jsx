@@ -1,29 +1,21 @@
 import React from 'react'
-import { graphql, Link, useStaticQuery } from 'gatsby'
+import { Link } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import BigNews from '../BigNews'
+import useSiteMetadata from '../../hooks/use-site-metadata'
 
 const Footer = () => {
-  const { site } = useStaticQuery(graphql`
-    {
-      site {
-        siteMetadata {
-          title
-          description
-        }
-      }
-    }
-  `)
+  const siteMetadata = useSiteMetadata()
 
   return (
     <>
       <footer className="bg-gray-700 text-white px-3 py-6">
         <div className="container max-w-5xl ">
-          <p className="m-0 text-2xl font-bold">{site.siteMetadata.title}</p>
+          <p className="m-0 text-2xl font-bold">{siteMetadata.title}</p>
 
           <div className="flex flex-col md:flex-row justify-between py-4">
             <p className="m-0 mr-4 w-full md:w-1/2">
-              {site.siteMetadata.description}
+              {siteMetadata.description}
             </p>
 
             <div className="flex-shrink-0 flex flex-wrap md:w-1/3 mt-4 md:mt-0">
