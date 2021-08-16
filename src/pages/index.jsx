@@ -5,12 +5,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Seo from '../components/Seo/Seo'
 import useSiteMetadata from '../hooks/use-site-metadata'
 
-const Home = ({ path, data: { file } }) => {
+const Home = ({ location, data: { file } }) => {
   const siteMetadata = useSiteMetadata()
 
   return (
     <>
-      <Seo description={siteMetadata.description} path={path} />
+      <Seo description={siteMetadata.description} path={location.pathname} />
 
       <div className="container py-16 mx-auto max-w-3xl px-3">
         <div className="flex justify-center">

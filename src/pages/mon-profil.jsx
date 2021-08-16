@@ -8,12 +8,12 @@ import Experience from '../components/Resume/Experience'
 import Education from '../components/Resume/Education'
 import Hobbies from '../components/Resume/Hobbies'
 
-const Profile = ({ path, data: { file } }) => (
+const Profile = ({ location, data: { file } }) => (
   <>
     <Seo
       title="Mon profil"
       description="Tu trouvera tout mon parcours."
-      path={path}
+      path={location.pathname}
     />
 
     <About file={file} />

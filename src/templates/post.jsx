@@ -6,12 +6,12 @@ import PageSeo from '../components/Seo/PageSeo'
 import { graphql } from 'gatsby'
 
 const Post = ({
-  path,
+  location,
   data: { markdownRemark: post, allCommentsYaml },
   pageContext,
 }) => (
   <>
-    <PageSeo page={post} path={path} />
+    <PageSeo page={post} path={location.pathname} />
 
     <article itemScope="" itemType="http://schema.org/BlogPosting">
       <div className="container pt-16 px-3 max-w-3xl">

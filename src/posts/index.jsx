@@ -5,7 +5,7 @@ import Pagination from '../components/Layout/Pagination'
 import { graphql } from 'gatsby'
 
 const Blog = ({
-  path,
+  location,
   data: {
     allMarkdownRemark: { edges: posts },
   },
@@ -15,7 +15,7 @@ const Blog = ({
     <Seo
       title="Articles"
       description="La liste de tous les articles que j'ai publié."
-      path={path}
+      path={location.pathname}
     />
 
     <div className="container px-3 py-16 mx-auto max-w-3xl">

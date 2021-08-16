@@ -11,7 +11,7 @@ const slugify = (string) => {
 }
 
 const Categories = ({
-  path,
+  location,
   data: {
     allMarkdownRemark: { group },
   },
@@ -20,7 +20,7 @@ const Categories = ({
     <Seo
       title="Catégories"
       description="La liste de tous les articles triés par catégorie."
-      path={path}
+      path={location.pathname}
     />
 
     <div className="container py-16 px-3 mx-auto max-w-3xl">

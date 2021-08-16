@@ -4,9 +4,13 @@ import { graphql } from 'gatsby'
 import PodcastPagination from '../components/Podcast/PodcastPagination'
 import PageSeo from '../components/Seo/PageSeo'
 
-const Podcast = ({ path, data: { markdownRemark: podcast }, pageContext }) => (
+const Podcast = ({
+  location,
+  data: { markdownRemark: podcast },
+  pageContext,
+}) => (
   <>
-    <PageSeo page={podcast} path={path} />
+    <PageSeo page={podcast} path={location.pathname} />
 
     <Helmet>
       <script src="https://player.ausha.co/ausha-player.js" defer></script>

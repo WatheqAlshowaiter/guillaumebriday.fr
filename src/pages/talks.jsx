@@ -3,12 +3,12 @@ import Seo from '../components/Seo/Seo'
 import { graphql } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 
-const Talks = ({ path, data: { file, allTalksYaml } }) => (
+const Talks = ({ location, data: { file, allTalksYaml } }) => (
   <>
     <Seo
       title="Talks"
       description="Il arrive que je fasse des talks de temps à autre. Tu trouveras ici la liste complète avec les vidéos et les slides."
-      path={path}
+      path={location.pathname}
     />
 
     <div className="container py-16 px-3 mx-auto max-w-3xl">

@@ -6,7 +6,7 @@ import Seo from '../components/Seo/Seo'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Podcast = ({
-  path,
+  location,
   data: {
     allMarkdownRemark: { edges: podcasts },
   },
@@ -19,7 +19,7 @@ const Podcast = ({
     <Seo
       title="Podcast"
       description="J'ai lancé un Podcast avec des amis pour parler de Tech, de Business, de DevOps, de Produits et plein d'autres choses !"
-      path={path}
+      path={location.pathname}
     />
 
     <div className="container py-16 px-3 mx-auto max-w-3xl">

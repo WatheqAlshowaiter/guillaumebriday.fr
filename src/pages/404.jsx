@@ -2,12 +2,12 @@ import React from 'react'
 import Seo from '../components/Seo/Seo'
 import { Link } from 'gatsby'
 
-const NotFound = ({ path }) => (
+const NotFound = ({ location }) => (
   <>
     <Seo
       title="Oups ! La page est introuvable…"
       description="La page que vous cherchez n'est plus disponible ou a été déplacée."
-      path={path}
+      path={location.pathname}
     />
 
     <div className="container px-3 py-16 mx-auto max-w-3xl">
