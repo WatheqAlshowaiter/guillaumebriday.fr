@@ -2,15 +2,16 @@ import React from 'react'
 import PostHeader from '../components/Post/PostHeader'
 import PostPagination from '../components/Post/PostPagination'
 import CommentList from '../components/Comment/CommentList'
-import Seo from '../components/Seo/Seo'
+import PageSeo from '../components/Seo/PageSeo'
 import { graphql } from 'gatsby'
 
-const BlogPost = ({
+const Post = ({
+  location,
   data: { markdownRemark: post, allCommentsYaml, site },
   pageContext,
 }) => (
   <>
-    <Seo site={site} page={post}></Seo>
+    <PageSeo location={location} site={site} page={post}></PageSeo>
 
     <article itemScope="" itemType="http://schema.org/BlogPosting">
       <div className="container pt-16 px-3 max-w-3xl">
@@ -35,7 +36,8 @@ const BlogPost = ({
   </>
 )
 
-export default BlogPost
+export default Post
+
 export const pageQuery = graphql`
   query ($slug: String!) {
     site {

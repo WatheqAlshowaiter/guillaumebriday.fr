@@ -1,5 +1,5 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
+import Seo from '../components/Seo/Seo'
 import { graphql } from 'gatsby'
 
 import About from '../components/Resume/About'
@@ -8,15 +8,13 @@ import Experience from '../components/Resume/Experience'
 import Education from '../components/Resume/Education'
 import Hobbies from '../components/Resume/Hobbies'
 
-const Profile = ({ data: { site, file } }) => (
+const Profile = ({ location, data: { site, file } }) => (
   <>
-    <Helmet>
-      <title>Mon profil | {site.siteMetadata.title}</title>
-      <meta
-        name="description"
-        content="Tu trouvera tout mon parcours sur mon profil."
-      />
-    </Helmet>
+    <Seo
+      title={`Mon profil | ${site.siteMetadata.title}`}
+      description="Tu trouvera tout mon parcours."
+      location={location}
+    />
 
     <About file={file} />
     <Skill />

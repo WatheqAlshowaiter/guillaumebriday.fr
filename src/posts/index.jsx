@@ -1,10 +1,11 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
+import Seo from '../components/Seo/Seo'
 import PostList from '../components/Post/PostList'
 import Pagination from '../components/Layout/Pagination'
 import { graphql } from 'gatsby'
 
 const Blog = ({
+  location,
   data: {
     allMarkdownRemark: { edges: posts },
     site,
@@ -12,13 +13,11 @@ const Blog = ({
   pageContext,
 }) => (
   <>
-    <Helmet>
-      <title>Articles | {site.siteMetadata.title}</title>
-      <meta
-        name="description"
-        content="La liste de tous les articles que j'ai publié."
-      />
-    </Helmet>
+    <Seo
+      title={`Articles | ${site.siteMetadata.title}`}
+      description="La liste de tous les articles que j'ai publié."
+      location={location}
+    />
 
     <div className="container px-3 py-16 mx-auto max-w-3xl">
       <h1>Articles</h1>

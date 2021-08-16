@@ -1,17 +1,15 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
+import Seo from '../components/Seo/Seo'
 import { graphql } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 
-const Talks = ({ data: { site, file, allTalksYaml } }) => (
+const Talks = ({ location, data: { site, file, allTalksYaml } }) => (
   <>
-    <Helmet>
-      <title>Talks | {site.siteMetadata.title}</title>
-      <meta
-        name="description"
-        content="Il arrive que je fasse des talks de temps à autre. Tu trouveras ici la liste complète avec les vidéos et les slides."
-      />
-    </Helmet>
+    <Seo
+      title={`Talks | ${site.siteMetadata.title}`}
+      description="Il arrive que je fasse des talks de temps à autre. Tu trouveras ici la liste complète avec les vidéos et les slides."
+      location={location}
+    />
 
     <div className="container py-16 px-3 mx-auto max-w-3xl">
       <h1>Talks</h1>

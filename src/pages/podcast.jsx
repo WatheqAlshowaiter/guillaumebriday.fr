@@ -2,9 +2,11 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import PodcastList from '../components/Podcast/PodcastList'
+import Seo from '../components/Seo/Seo'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Podcast = ({
+  location,
   data: {
     allMarkdownRemark: { edges: podcasts },
     site,
@@ -12,14 +14,14 @@ const Podcast = ({
 }) => (
   <>
     <Helmet>
-      <title>Podcast | {site.siteMetadata.title}</title>
-      <meta
-        name="description"
-        content="J'ai lancé un Podcast avec des amis pour parler de Tech, de Business, de DevOps, de Produits et plein d'autres choses !"
-      />
-
       <script src="https://player.ausha.co/ausha-player.js" defer></script>
     </Helmet>
+
+    <Seo
+      title={`Podcast | ${site.siteMetadata.title}`}
+      description="J'ai lancé un Podcast avec des amis pour parler de Tech, de Business, de DevOps, de Produits et plein d'autres choses !"
+      location={location}
+    />
 
     <div className="container py-16 px-3 mx-auto max-w-3xl">
       <div className="border-b mb-4">

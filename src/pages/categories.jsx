@@ -1,5 +1,5 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
+import Seo from '../components/Seo/Seo'
 import { graphql, Link } from 'gatsby'
 
 const slugify = (string) => {
@@ -11,19 +11,18 @@ const slugify = (string) => {
 }
 
 const Categories = ({
+  location,
   data: {
     allMarkdownRemark: { group },
     site,
   },
 }) => (
   <>
-    <Helmet>
-      <title>Catégories | {site.siteMetadata.title}</title>
-      <meta
-        name="description"
-        content="La liste de tous les articles triés par catégorie."
-      />
-    </Helmet>
+    <Seo
+      title={`Catégories | ${site.siteMetadata.title}`}
+      description="La liste de tous les articles triés par catégorie."
+      location={location}
+    />
 
     <div className="container py-16 px-3 mx-auto max-w-3xl">
       <h1>Catégories</h1>

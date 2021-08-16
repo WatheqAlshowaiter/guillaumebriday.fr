@@ -1,11 +1,13 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
+import Seo from '../components/Seo/Seo'
 import { graphql, Link } from 'gatsby'
 
-const NotFound = ({ data: { site } }) => (
+const NotFound = ({ location, data: { site } }) => (
   <>
-    <Helmet
+    <Seo
       title={`Oups ! La page est introuvable… | ${site.siteMetadata.title}`}
+      description="La page que vous cherchez n'est plus disponible ou a été déplacée."
+      location={location}
     />
 
     <div className="container px-3 py-16 mx-auto max-w-3xl">

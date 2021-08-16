@@ -2,11 +2,16 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
 import PodcastPagination from '../components/Podcast/PodcastPagination'
-import Seo from '../components/Seo/Seo'
+import PageSeo from '../components/Seo/PageSeo'
 
-const Page = ({ data: { markdownRemark: podcast, site }, pageContext }) => (
+const Podcast = ({
+  location,
+  data: { markdownRemark: podcast, site },
+  pageContext,
+}) => (
   <>
-    <Seo site={site} page={podcast}></Seo>
+    <PageSeo location={location} site={site} page={podcast}></PageSeo>
+
     <Helmet>
       <script src="https://player.ausha.co/ausha-player.js" defer></script>
     </Helmet>
@@ -60,7 +65,8 @@ const Page = ({ data: { markdownRemark: podcast, site }, pageContext }) => (
   </>
 )
 
-export default Page
+export default Podcast
+
 export const pageQuery = graphql`
   query ($slug: String!) {
     site {
