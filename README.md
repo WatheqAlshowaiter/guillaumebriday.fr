@@ -28,8 +28,8 @@ $ yarn format
 ```
 
 5. To run the final result with all of the optimizations (i,e to run it on the server):
-```
-yarn serve
+```bash
+$ yarn serve
 ```
 
 ## Contributing
