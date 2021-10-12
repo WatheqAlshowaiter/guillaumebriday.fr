@@ -7,14 +7,29 @@ Source code of [guillaumebriday.fr](https://guillaumebriday.fr) built with [Gats
 
 ## Running in development
 
+1. Make an <https://www.algolia.com/> Account.
+2. Copy the `.env.example` to yout `.env` file using `cp .env.example .env`, it will create an `.env` file if you don't have one.
+3. Copy all these keys to your `.env` file to have the functionality of algolia search.  
+    they are:
+    ```
+    ALGOLIA_API_KEY=
+    ALGOLIA_APP_ID=
+    ALGOLIA_INDEX_NAME=
+    ```
+4. run the commands:
 ```bash
 $ yarn
 $ yarn develop
 ```
 
-Format code:
+if you want to Format the code:
 ```bash
 $ yarn format
+```
+
+5. To run the final result with all of the optimizations (i,e to run it on the server):
+```
+yarn serve
 ```
 
 ## Contributing
